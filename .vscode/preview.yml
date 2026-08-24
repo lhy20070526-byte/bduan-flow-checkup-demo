@@ -1,0 +1,8 @@
+apps:
+  - port: 4177
+    run: python3 -m http.server 4177 --bind 0.0.0.0
+    root: .
+    name: 流程体检室
+    autoOpen: true
+    autoPreview: true
+    mainPort: true
