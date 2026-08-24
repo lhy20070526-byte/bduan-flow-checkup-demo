@@ -95,7 +95,9 @@
     demoToggle.addEventListener('click', () => {
       const isHidden = demoOutput.hidden;
       demoOutput.hidden = !isHidden;
-      demoToggle.innerHTML = isHidden ? '收起匿名输出 <span>↗</span>' : '查看匿名输出 <span>↘</span>';
+      const isExpanded = !demoOutput.hidden;
+      demoToggle.setAttribute('aria-expanded', String(isExpanded));
+      demoToggle.innerHTML = isExpanded ? '收起匿名输出 <span>↗</span>' : '查看匿名输出 <span>↘</span>';
     });
   }
 })();
